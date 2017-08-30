@@ -1,0 +1,70 @@
+<div class="container-fluid display-h3 cont-height">
+    <h4 class="inout display-h4 border-top-0 border-left-0 border-right-0">{{header}}</h4>
+    <img class="img-fluid img-thumbnail text-center" alt="Sorry...Error Loading!" [src]="imgLink" />
+
+    <form action="/html/tags/html_form_tag_action.cfm">
+        <div class="container">
+            <div class="form-group form-search custFormCont">
+                <div class="form-group row">
+
+                    <label for="first_name" class="col-xs-12 col sm-12 col-md-1 col-form-label" width="100%">First Name</label>
+                    <div class="col-xs-12 col sm-12 col-md-3">
+                        <input [ngStyle]="{'background-color':focusControlbg1}" max-width="75%" type="text" (focus)="onFocus1()" (blur)="onBlur1()"
+                            class="form-control form-control-search" name="firstNameN" [(ngModel)]="firstName" #fnameRef (keyup)="0"
+                        />
+                    </div>
+
+
+                    <label for="last_name" class="col-xs-12 col sm-12 col-md-1 col-form-label" width="100%">Last Name</label>
+                    <div class="col-xs-12 col sm-12 col-md-3">
+                        <input [ngStyle]="{'background-color':focusControlbg2}" type="text" max-width="75%" (focus)="onFocus2()" (blur)="onBlur2()"
+                            class="form-control form-control-search" name="lastNameN" [(ngModel)]="lastName">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="offset-xs-3 col-xs-9">
+                    <button class="btn btn-primary" type="submit" (click)="onClick()"> Toggle</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <p class="align-left">FullName: {{firstName}} {{lastName}} </p>
+
+    <div class="container">
+        <div class="row">
+            <blockquote class="lead col-sm-12 col-md-10"> The Data from the Child Component is : {{childData}} </blockquote>
+        </div>
+
+        <div class="row">
+            <ul>
+                <li *ngFor="let color of colors"> {{color}} </li>
+            </ul>
+        </div>
+
+        <!--ngIf example-->
+        <p *ngIf="pControl"> Hello This is controlled by a variable </p>
+
+        <!--ngClass example-->
+        <p [ngClass]="{bgcolor:bgcontrol, fontColor:fontControl}"> This is an example of Attribut Directive ngClass </p>
+
+        <!-- <p [ngStyle]="{'font-style':style, 'font-size':size}"> Example of nClass </p> -->
+
+
+        <div class="row">
+            <blockquote class="lead col-sm-12 col-md-10"> Http service using Dependency Injection </blockquote>
+        </div>
+        <div class="row">
+            <ul>
+                <li *ngFor="let employee of employees">
+                    {{employee.id}}. {{employee.name}} -- {{employee.age}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+</div>

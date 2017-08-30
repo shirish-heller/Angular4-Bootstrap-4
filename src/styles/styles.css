@@ -1,0 +1,111 @@
+form {
+	width:50%;
+}
+
+.logo {
+	height: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+input.ng-invalid, select.ng-invalid {
+  border-left: 5px solid #a94442;
+}
+
+input.ng-valid, select.ng-valid {
+  border-left: 5px solid #42A948;
+}
+
+
+.form-search .form-control-search {
+    background-color: rgba(121,121,121,0.55);
+    box-shadow: none;
+    border: medium none;
+    border-radius: 30px;
+    box-shadow: 0 0 0;
+    color: #FFFFFF;
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    height: 50px;
+    line-height: 1.42857;
+    padding: 6px 20px;
+    vertical-align: middle;
+    transition: background-color .9s;
+}
+
+.srch {
+      background-color: rgba(121,121,121,0.55);
+    box-shadow: none;
+    border: medium none;
+    border-radius: 30px;
+    box-shadow: 0 0 0;
+    color: #FFFFFF;
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    height: 50px;
+    line-height: 1.42857;
+    padding: 6px 20px;
+    vertical-align: middle;
+    transition: background-color .5s;
+    outline: none;
+}
+
+.inout {
+  color:yellowgreen;
+}
+
+.mainHdr {
+  background-color: lightcoral;
+}
+
+.navbar-seperator {
+	border:2px solid #ccc;
+}
+
+ .nav-cont{
+	overflow-x: hidden;
+  overflow-y: scroll;
+  height:104px;
+  float:none;
+  display:inline-block;
+  background-color: coral;
+
+} 
+
+ .nav-cont.navbar-default .navbar-nav>li>a {
+   color:white;
+ }
+
+ .nav-cont.navbar-default .navbar-nav>li {
+   border-right:1px solid white;
+ }
+
+  .nav-cont.navbar-default .navbar-nav>.active>a {
+  color:coral!important;
+  font-weight: bold;
+  font-size: 14px;
+ }
+
+.nav-tabs > li>a {
+  float:none;
+  display:inline-block;	
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color:coral;
+  background-color: white;
+}
+
+.bgPage {
+  background-image: url("../images/frost.jpg");
+  
+  /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

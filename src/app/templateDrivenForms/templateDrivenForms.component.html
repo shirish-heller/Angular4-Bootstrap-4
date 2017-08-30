@@ -1,0 +1,67 @@
+<div class="container">
+
+    <h1>SignUp Today !!</h1>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+        <div class="form-group">
+            <label>First Name:</label>
+            <input type="text" class="form-control" name="fname" #fname="ngModel" ngModel required/>
+            <div class="alert-danger alert" [hidden]="fname.valid || !fname.touched">Name is Required</div>
+        </div>
+
+        <div class="form-group">
+            <label>Last Name:</label>
+            <input type="text" class="form-control" name="lname" #lname="ngModel" ngModel required/>
+            <div class="alert-danger alert" [hidden]="lname.valid || !lname.touched">Name is Required</div>
+        </div>
+
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="text" class="form-control" name="email" #email="ngModel" ngModel required/>
+            <div class="alert-danger alert" [hidden]="email.valid || !email.touched">Email is Required</div>
+        </div>
+
+        <div class="form-group">
+            <label>City:</label>
+            <input type="text" class="form-control" name="city" #city="ngModel" ngModel required/>
+            <div class="alert-danger alert" [hidden]="city.valid || !city.touched">City is Required</div>
+        </div>
+
+        <div class="form-group">
+            <label>Pin Code:</label>
+            <input type="text" class="form-control" name="pin" #pin="ngModel" ngModel pattern="^[1-9][0-9]{4}$" minlength="1" maxlength="5" />
+            <div *ngIf="pin.invalid && pin.touched" class="alert-danger alert">
+                 <div [hidden]="!pin.errors.pattern">Invalid Pin</div> 
+                
+            </div>
+            
+        </div>
+
+        <div class="form-group">
+            <label>Address Line 1:</label>
+            <input type="text" class="form-control" name="addr1" #addr1="ngModel" ngModel/>
+        </div>
+
+        <div class="form-group">
+            <label>Sex:</label>
+            <input type="radio" value="Male" class="form-check-input" name="sex" #sex="ngModel" ngModel/>Male
+            <input type="radio" value="Female" class="form-check-input" name="sex" ngModel/>Female
+        </div>
+
+        <div class="form-group">
+            <label>Country:</label>
+            <select type="text" class="form-control" name="country" ngModel>
+            <option>India </option>
+            <option>Russia </option>
+            <option>China </option>
+            <option>UK </option>
+            <option>USA </option>
+            <option>Europe </option>
+        </select>
+        </div>
+        <button type="submit" [disabled]="!f.valid" class="btn btn-primary">Submit </button>
+
+
+    </form>
+
+</div>
